@@ -11,6 +11,7 @@ if ($_SERVER['DOCUMENT_ROOT'] == 'C:/xampp/htdocs/InfluencerJunk/public_html') {
     define('INCLUDES_FOLDER', dirname($_SERVER['DOCUMENT_ROOT']) . '/includes/');
     define('BASE_URL', 'https://influencerjunk.com/');
     
+
     
 }
 
