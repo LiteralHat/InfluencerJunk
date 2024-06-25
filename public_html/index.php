@@ -1,3 +1,5 @@
+<?php include_once '../config.php'?>
+
 <!doctype html>
 <html lang="en">
 
@@ -12,8 +14,6 @@
 
 <body>
     <img src="img/mainheader.png">
-
-
     <nav class="navbar">
         <ul>
             <li>Home</li>
