@@ -1,0 +1,202 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* actual css styling starts here */
+
+.navbar {
+    background-color: black;
+    width: 100%;
+    height: 100%
+}
+
+.navbar > ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    padding: 1vh;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ .navbar > ul  :hover {
+    color: #ff0984;
+ }
+
+ .obnoxiousnotificationbar {
+    background-color: #B81365;
+    color: white;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    height: 100%;
+    padding: 0.4rem;
+    text-align: center;
+    border-top: 0.1rem solid white;
+    border-bottom: 0.1rem solid white;
+ }
+ 
+ .obnoxiousnotificationbar2 {
+    background-color: #000000;
+    color: white;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    height: 100%;
+    padding: 0.4rem;
+    text-align: center;
+ }
+
+ .bold {
+    font-weight: bold;
+ }
+
+ .herobanner {
+    width: 100%;
+    height: auto;
+ }
+ 
+ .flavortext {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 3rem;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    bottom: 20rem;
+    text-align: left;
+    width: 300px;
+ }
