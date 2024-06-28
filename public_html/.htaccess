@@ -1,0 +1,7 @@
+
+RewriteEngine On
+
+ErrorDocument 404 https:\\literalhat.com/404
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule (.*) $1.php [L]

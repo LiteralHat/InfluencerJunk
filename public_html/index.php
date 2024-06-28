@@ -13,26 +13,12 @@
 </head>
 
 <body>
-    <img src="img/mainheader.png">
-    <nav class="navbar">
-        <ul>
-            <li>Home</li>
-            <li>T-Shirts</li>
-            <li>Accessories</li>
-            <li>All</li>
-            <li>Sustainability</li>
-            <li>About</li>
+    
+<?php include_once ELEMENT_HEADER ?>
 
-            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
-        </ul>
-    </nav>
 
-    <nav class="obnoxiousnotificationbar">
-        <p>USE CODE <span class="bold">SUCKUP</span> FOR 1% OFF!</p>
-    </nav>
-    <nav class="obnoxiousnotificationbar2">
-        <p><span class='bold'>SPECIAL LIMITED TIME OFFER..! </span>FREE SHIPPING FOR ORDERS OVER $200391.99</p>
-    </nav>
+
+</div>
 
 
     

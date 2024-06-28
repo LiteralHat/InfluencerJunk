@@ -140,13 +140,46 @@ table {
 
 /* actual css styling starts here */
 
+.headerimage {
+    width: 60vw;
+    display: flex;
+    margin: 0 auto;
+    
+}
+
+.headerbody {
+    width: 100%;
+    background-color: rgb(0, 0, 192);
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.5rem 0;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.tiny {
+    font-size: 0.7rem;
+}
+
+.white, .white *{
+    color: white;
+}
+
 .navbar {
     background-color: black;
     width: 100%;
-    height: 100%
+    height: 100%;
+    padding: 0 15vw;
 }
 
-.navbar > ul {
+.navbar > ul{
     color: white;
     display: flex;
     flex-direction: row;
@@ -157,12 +190,20 @@ table {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
- .navbar > ul  :hover {
-    color: #ff0984;
+.navbar > ul  :link,  .navbar > ul  :visited {
+    color: #ffffff;
+    text-decoration: none;
  }
 
+ .navbar > ul  :hover {
+    color: #ffef09;
+ }
+ 
+
+
+
  .obnoxiousnotificationbar {
-    background-color: #B81365;
+    background-color: #ff0080;
     color: white;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
     height: 100%;
@@ -179,10 +220,19 @@ table {
     height: 100%;
     padding: 0.4rem;
     text-align: center;
+    border-bottom: 0.1rem solid white;
  }
 
  .bold {
     font-weight: bold;
+ }
+
+ .italics {
+    font-style: italic;
+ }
+ 
+ .strikethrough {
+    text-decoration: line-through;
  }
 
  .herobanner {
@@ -200,3 +250,21 @@ table {
     text-align: left;
     width: 300px;
  }
+
+ .contentbody {
+    background-color: #000f97;
+    padding: 1rem 25vw;
+    height: auto;
+ }
+
+ .contentbody p{
+    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    padding: 0.3rem 0;
+    line-height: 1.3rem;
+}
+
+.contentbody li{
+    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    list-style: disc;
+    margin-left: 2rem;
+}
