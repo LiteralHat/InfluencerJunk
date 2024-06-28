@@ -140,11 +140,16 @@ table {
 
 /* actual css styling starts here */
 
+
+p {
+    font-family: Comic Sans MS;
+}
+
 .headerimage {
     width: 60vw;
     display: flex;
     margin: 0 auto;
-    
+
 }
 
 .headerbody {
@@ -168,7 +173,8 @@ h2 {
     font-size: 0.7rem;
 }
 
-.white, .white *{
+.white,
+.white * {
     color: white;
 }
 
@@ -179,68 +185,69 @@ h2 {
     padding: 0 15vw;
 }
 
-.navbar > ul{
+.navbar>ul {
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;    
+    justify-content: space-around;
     padding: 1vh;
     text-transform: uppercase;
     font-size: 2rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.navbar > ul  :link,  .navbar > ul  :visited {
+.navbar>ul :link,
+.navbar>ul :visited {
     color: #ffffff;
     text-decoration: none;
- }
+}
 
- .navbar > ul  :hover {
+.navbar>ul :hover {
     color: #ffef09;
- }
- 
+}
 
 
 
- .obnoxiousnotificationbar {
+
+.obnoxiousnotificationbar {
     background-color: #ff0080;
     color: white;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     height: 100%;
     padding: 0.4rem;
     text-align: center;
     border-top: 0.1rem solid white;
     border-bottom: 0.1rem solid white;
- }
- 
- .obnoxiousnotificationbar2 {
+}
+
+.obnoxiousnotificationbar2 {
     background-color: #000000;
     color: white;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     height: 100%;
     padding: 0.4rem;
     text-align: center;
     border-bottom: 0.1rem solid white;
- }
+}
 
- .bold {
+.bold {
     font-weight: bold;
- }
+}
 
- .italics {
+.italics {
     font-style: italic;
- }
- 
- .strikethrough {
-    text-decoration: line-through;
- }
+}
 
- .herobanner {
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.herobanner {
     width: 100%;
     height: auto;
- }
- 
- .flavortext {
+}
+
+.flavortext {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 3rem;
     color: white;
@@ -249,22 +256,76 @@ h2 {
     bottom: 20rem;
     text-align: left;
     width: 300px;
- }
+}
 
- .contentbody {
+.contentbody {
     background-color: #000f97;
     padding: 1rem 25vw;
     height: auto;
- }
+}
 
- .contentbody p{
-    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+.contentbody p {
+    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     padding: 0.3rem 0;
     line-height: 1.3rem;
 }
 
-.contentbody li{
-    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+.contentbody li {
+    font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     list-style: disc;
     margin-left: 2rem;
+}
+
+.productbody {
+    background-color: rgb(3, 0, 185);
+    padding: 0 20rem;
+}
+
+.productgridwrapper {
+ 
+    padding: 2rem;
+}
+
+.productgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.productgrid .productbox {
+    margin: 0.4rem;
+    border: 0.2rem solid black;
+    background-color: white;
+    width: 21.4rem;
+    height: 24rem;
+    padding: 1rem;
+}
+
+.productbox p {
+    margin: 0.4rem 0;
+}
+
+.productgrid  :hover {
+    background-color: rgb(255, 247, 135);
+}
+
+.productgridimage:hover {
+    rotate: 3deg;
+}
+
+.productbox a {
+    text-decoration: none;
+    color: black;
+}
+
+.productbox a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.productbox a:hover {
+    text-decoration: none;
+    color: red;
 }

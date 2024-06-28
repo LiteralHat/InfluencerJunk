@@ -1,4 +1,7 @@
-<?php include_once '../config.php'?>
+<?php include_once '../config.php';
+include_once '../controllers/storecontroller.php';
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -13,20 +16,32 @@
 </head>
 
 <body>
-    
-<?php include_once ELEMENT_HEADER ?>
+
+    <?php include_once ELEMENT_HEADER ?>
+
+    <div class="productbody">
+        <div class="productgridwrapper">
+            <div class="productgrid">
+                <?php
+
+                foreach ($data as $product) {
+                    $productName = str_replace('-', ' ', $product['name']);
+                    $productPrice = $product['price'];
+                    $productName = ucwords($productName);
+                    echo "<div class='productbox'><a href='view/". $product['category'] ."/". $product['name']."'><img class='productgridimage' src='" . BASE_URL . "/img/products/" . htmlspecialchars($product["name"]) . ".png'><p class='bold'>" . $productName . "</p>
+                    <p class=''>" . $productPrice . "</p></a></div>"
+                    ;
+
+                }
+
+                ?>
+            </div>
+        </div>
+    </div>
+
+    </div>
 
 
-
-</div>
-
-
-    
-    <!-- <div>
-        <img class="herobanner" src="https://live.staticflickr.com/3082/2697297072_2189c83eda_z.jpg" width="640" height="427"
-            alt="Sweatshop project" />
-            <p class="flavortext">Proudly display your lack of concern over basic human rights!</p>
-    </div> -->
 
 
 </body>

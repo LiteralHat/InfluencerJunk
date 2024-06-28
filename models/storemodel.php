@@ -11,8 +11,8 @@ class StoreModel {
 
 //database query that gets everything
 
-    public function queryAllItems($columns, $databaseType) {
-        $sql = "SELECT $columns FROM $databaseType";
+    public function queryAllItems($columns) {
+        $sql = "SELECT $columns FROM products";
         $stmt = $this->dbh->getDb()->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetchAll();
@@ -25,6 +25,11 @@ class StoreModel {
         $stmt->execute();
         $data = $stmt->fetchAll();
         return $data;
+    }
+
+//queries view item for individual image view
+    public function queryViewItem($columns) {
+
     }
 
 }
