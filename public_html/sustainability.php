@@ -21,7 +21,7 @@
         <h1 class="large">Sustainability</h1>
         <p>You see, at InfluencerJunk.com, we're deeply passionate about the planet, and like, human welfare and stuff.
             So we decided that we will be the bigger <span class="strikethrough">company</span> person and actually make
-            an effort unlike all the <span class="italics">OTHERS</span> (eyeroll).</p>
+            an effort unlike all the <span class="italics">OTHERS</span> (eyeroll). What better way to express our concern than to create a section of our website PURELY dedicated to our love for MOTHER NATURE?</p>
 
         <h2>Our Products</h2>
 

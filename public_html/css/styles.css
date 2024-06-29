@@ -143,6 +143,7 @@ table {
 
 p {
     font-family: Comic Sans MS;
+    line-height: 1.3rem;
 }
 
 .headerimage {
@@ -167,6 +168,12 @@ h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 0.5rem 0;
     font-size: 2rem;
+}
+
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
 }
 
 .tiny {
@@ -274,6 +281,7 @@ h2 {
     font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     list-style: disc;
     margin-left: 2rem;
+    font-size: 0.7rem;
 }
 
 .productbody {
@@ -345,7 +353,7 @@ h2 {
 
 .viewimage {
     background-color: white;
-
+    border: 0.2rem solid black;
 }
 
 .viewimage img {
@@ -363,4 +371,29 @@ h2 {
 .viewprice {
     font-size: 1.7rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.addtocart {
+    background-color: rgb(19, 165, 0);
+    color: rgb(255, 255, 255);
+    padding: 0.4rem;
+    font-family: Cooper Black, Jokerman, Papyrus, comic sans MS;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    border: 0.1rem solid rgb(255, 255, 255);
+    width: 100%;
+}
+
+.addtocart:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 0.4rem;
+    font-family: Cooper Black, Jokerman, Papyrus, comic sans MS;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    border: 0.1rem solid rgb(255, 255, 255);
+    width: 100%;
+    cursor: pointer;
 }
