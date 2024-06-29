@@ -35,12 +35,18 @@ $controller = new StoreController();
 if (strpos(($_SERVER['REQUEST_URI']), 'index') == true) {
     $columns = 'name, price, category';
     $data = $controller->getAllItems($columns);
-} elseif (strpos(($_SERVER['REQUEST_URI']), 'shirts') == true) {
-    $data = $controller->getAllItems($columns);
+
+} elseif (strpos(($_SERVER['REQUEST_URI']), 'view') !== false) {
+
+    $name = str_replace('/view/', '', $_SERVER['REQUEST_URI']);
+    
+    $categoryandname = explode('/', $name);
+    list($category, $name) = $categoryandname;
+    
+    $data = $controller->viewItem($category, $name);
+    $data = $data[0];
+
 } else {
+    $columns = 'name, price, category';
     $data = $controller->getAllItems($columns);
 }
-
-
-
-

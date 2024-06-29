@@ -260,7 +260,7 @@ h2 {
 
 .contentbody {
     background-color: #000f97;
-    padding: 1rem 25vw;
+    padding: 1rem 15vw;
     height: auto;
 }
 
@@ -270,7 +270,7 @@ h2 {
     line-height: 1.3rem;
 }
 
-.contentbody li {
+.genericlist {
     font-family: Comic Sans MS, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     list-style: disc;
     margin-left: 2rem;
@@ -282,7 +282,7 @@ h2 {
 }
 
 .productgridwrapper {
- 
+
     padding: 2rem;
 }
 
@@ -292,6 +292,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
+
 }
 
 .productgrid .productbox {
@@ -307,7 +308,7 @@ h2 {
     margin: 0.4rem 0;
 }
 
-.productgrid  :hover {
+.productgrid :hover {
     background-color: rgb(255, 247, 135);
 }
 
@@ -328,4 +329,38 @@ h2 {
 .productbox a:hover {
     text-decoration: none;
     color: red;
+}
+
+
+
+
+
+
+.viewitem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.4rem;
+}
+
+.viewimage {
+    background-color: white;
+
+}
+
+.viewimage img {
+    width: 40rem;
+
+}
+
+.viewdescription {
+    width: 40rem;
+    padding: 0 2rem;
+
+
+}
+
+.viewprice {
+    font-size: 1.7rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

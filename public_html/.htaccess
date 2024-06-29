@@ -1,7 +1,14 @@
-
 RewriteEngine On
 
-ErrorDocument 404 https:\\literalhat.com/404
 
+# Rewrite URLs ending with .php to URLs without .php
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule (.*) $1.php [L]
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Ensure URLs without .php get the correct content
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+RewriteRule ^view/(.*)$ view.php?item=$1 [L,QSA]

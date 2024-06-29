@@ -1,6 +1,4 @@
 <?php
-
-
 require '../config/dbh.php';
 
 class StoreModel {
@@ -28,9 +26,15 @@ class StoreModel {
     }
 
 //queries view item for individual image view
-    public function queryViewItem($columns) {
-
-    }
+public function queryViewItem($category, $name) {
+    $sql = "SELECT * FROM products WHERE category = :category AND name = :name";
+    $stmt = $this->dbh->getDb()->prepare($sql);
+    $stmt->bindParam(':category', $category); 
+    $stmt->bindParam(':name', $name); 
+    $stmt->execute(); // Execute the statement
+    $data = $stmt->fetchAll(); // Fetch all results
+    return $data;
+}
 
 }
 

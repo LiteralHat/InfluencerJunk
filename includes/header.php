@@ -1,15 +1,13 @@
 
 <div class="headerbody">
-<img class="headerimage" src="img/mainheader.png">
+<img class="headerimage" src=" <?php echo BASE_URL . "/img/mainheader.png"?>">
 </div>
     <nav class="navbar">
         <ul>
             <li><a href='<?php echo BASE_URL . 'index'?>'>Home</a></li>
-            <li>T-Shirts</li>
-            <li>Accessories</li>
-            <li>All</li>
+
             <li><a href='<?php echo BASE_URL . 'sustainability'?>'>Sustainability</a></li>
-            <li>About</li>
+          
 
             <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
         </ul>

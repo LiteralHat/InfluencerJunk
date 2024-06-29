@@ -1,15 +1,15 @@
-<?php include_once '../config.php';
+<?php include_once "../config.php";
 include_once '../controllers/storecontroller.php';
 
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <title>INFLUENCERJUNK.COM</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,8 +28,8 @@ include_once '../controllers/storecontroller.php';
                     $productName = str_replace('-', ' ', $product['name']);
                     $productPrice = $product['price'];
                     $productName = ucwords($productName);
-                    echo "<div class='productbox'><a href='view/". $product['category'] ."/". $product['name']."'><img class='productgridimage' src='" . BASE_URL . "/img/products/" . htmlspecialchars($product["name"]) . ".png'><p class='bold'>" . $productName . "</p>
-                    <p class=''>" . $productPrice . "</p></a></div>"
+                    echo '<div class="productbox"><a href="view/'. $product["category"] .'/'. $product["name"].'"><img class="productgridimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png"><p class="bold">' . $productName . '</p>
+                    <p class="">' . $productPrice . '</p></a></div>'
                     ;
 
                 }
