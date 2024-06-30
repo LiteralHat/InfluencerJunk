@@ -1,5 +1,5 @@
 <?php
-include_once "../config.php";
+include_once "../config/constants.php";
 require '../config/dbh.php';
 
 //constructs a dbh class so the cart can retrieve the cart items

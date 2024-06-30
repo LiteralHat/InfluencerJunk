@@ -1,11 +1,12 @@
 <?php
 
+include_once '../config/constants.php';
 //removes trailing slashes
 
 $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
 $defaultController = 'HomeController';
-$defaultMethod = 'index'; 
+$defaultMethod = 'index';
 
 $urlSegments = explode('/', $url);
 
@@ -19,6 +20,7 @@ if (file_exists($controllerFile)) {
 
     // Create controller object
     $controller = new $controllerName;
+   
 
     // Determine the method (action)
     $method = isset($urlSegments[1]) ? $urlSegments[1] : $defaultMethod;
@@ -30,7 +32,15 @@ if (file_exists($controllerFile)) {
         unset($urlSegments[1]); // Remove the method name
         $params = array_values($urlSegments); // Remaining segments as parameters
         $controller->$method(...$params);
+        
+        if ($method == 'index') {
+            $columns = 'name, price, category';
+            $data = $controller->getAllItems($columns);
+            // Use $data in your view or wherever needed
+        }
+
     } else {
+
         // Handle method not found (e.g., show 404 page)
         echo "Method not found";
     }

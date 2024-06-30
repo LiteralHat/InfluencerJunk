@@ -1,8 +1,3 @@
-<?php include_once "../config.php";
-include_once '../controllers/storecontroller.php';
-
-?>
-
 <!doctype html>
 <html lang='en'>
 
@@ -17,12 +12,13 @@ include_once '../controllers/storecontroller.php';
 
 <body>
 
-    <?php include_once ELEMENT_HEADER ?>
+    <!-- <?php include_once ELEMENT_HEADER ?> -->
 
     <div class="productbody">
         <div class="productgridwrapper">
             <div class="productgrid">
                 <?php
+                var_dump($data);
 
                 foreach ($data as $product) {
                     $productName = str_replace('-', ' ', $product['name']);
