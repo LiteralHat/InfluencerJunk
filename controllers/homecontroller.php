@@ -12,11 +12,9 @@ class HomeController
     }
     public function index()
     {
+        $columns = 'name, price, category';
+        $data = $this->model->queryAllItems($columns);
         require_once '../views/home/index.php';
-    }
 
-    public function getAllItems($columns)
-    {
-        return $this->model->queryAllItems($columns);
     }
 }

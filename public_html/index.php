@@ -13,7 +13,7 @@ $urlSegments = explode('/', $url);
 $controllerName = !empty($urlSegments[0]) ? ucfirst($urlSegments[0]) . 'controller' : $defaultController;
 $controllerFile = '../controllers/' . $controllerName . '.php';
 
-echo $controllerName;
+
 
 if (file_exists($controllerFile)) {
     require_once $controllerFile;
@@ -32,12 +32,6 @@ if (file_exists($controllerFile)) {
         unset($urlSegments[1]); // Remove the method name
         $params = array_values($urlSegments); // Remaining segments as parameters
         $controller->$method(...$params);
-        
-        if ($method == 'index') {
-            $columns = 'name, price, category';
-            $data = $controller->getAllItems($columns);
-            // Use $data in your view or wherever needed
-        }
 
     } else {
 
