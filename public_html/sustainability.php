@@ -21,7 +21,8 @@
         <h1 class="large">Sustainability</h1>
         <p>You see, at InfluencerJunk.com, we're deeply passionate about the planet, and like, human welfare and stuff.
             So we decided that we will be the bigger <span class="strikethrough">company</span> person and actually make
-            an effort unlike all the <span class="italics">OTHERS</span> (eyeroll). What better way to express our concern than to create a section of our website PURELY dedicated to our love for MOTHER NATURE?</p>
+            an effort unlike all the <span class="italics">OTHERS</span> (eyeroll). What better way to express our
+            concern than to create a section of our website PURELY dedicated to our love for MOTHER NATURE?</p>
 
         <h2>Our Products</h2>
 
@@ -31,7 +32,8 @@
 
         <p>Our vinyls are packaged in IANAL® certified, FART® approved, CBT® guarantee, and LWYMMDLWYMMDLWYJMMDLWYJMMD®
             recognised plastic. The sleeves are produced with post-consumer post-household household-grade second-hand
-            up-cycled asbestos, and we encourage you to reuse them because, like, you're responsible and you want to save the planet too, right?
+            up-cycled asbestos, and we encourage you to reuse them because, like, you're responsible and you want to
+            save the planet too, right?
         </p>
 
         <p class="tiny">
@@ -53,8 +55,9 @@
             hours. Individuals who fail to comply are slapped violently on the wrist and forced to sit in the time out
             corner.</p>
 
-        
+
         <br>
+        </div>
 
 </body>
 

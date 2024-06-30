@@ -33,10 +33,12 @@ include_once '../controllers/storecontroller.php';
                     ;
 
                 }
-
                 ?>
             </div>
         </div>
+
+            
+
     </div>
 
     </div>

@@ -268,7 +268,7 @@ h3 {
 .contentbody {
     background-color: #000f97;
     padding: 1rem 15vw;
-    height: auto;
+    min-height: 100vh;
 }
 
 .contentbody p {
@@ -287,6 +287,7 @@ h3 {
 .productbody {
     background-color: rgb(3, 0, 185);
     padding: 0 20rem;
+    min-height: 100vh;
 }
 
 .productgridwrapper {
@@ -396,4 +397,27 @@ h3 {
     border: 0.1rem solid rgb(255, 255, 255);
     width: 100%;
     cursor: pointer;
+}
+
+
+
+
+.cartbody {
+    background-color: rgb(111, 0, 185);
+    padding: 1rem 20rem;
+    min-height: 100vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.cartmain {
+    width: 55rem;
+}
+
+.cartpanel {
+    width: 25rem;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    background-color: #31183b;
 }

@@ -1,6 +1,6 @@
 
 <div class="headerbody">
-<img class="headerimage" src=" <?php echo BASE_URL . "/img/mainheader.png"?>">
+<img class="headerimage" src=" <?php echo BASE_URL . "img/mainheader.png"?>">
 </div>
     <nav class="navbar">
         <ul>
@@ -9,7 +9,7 @@
             <li><a href='<?php echo BASE_URL . 'sustainability'?>'>Sustainability</a></li>
           
 
-            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><a href='<?php echo BASE_URL . 'cart'?>'><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
         </ul>
     </nav>
 

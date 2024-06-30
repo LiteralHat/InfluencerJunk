@@ -44,42 +44,40 @@ include_once '../controllers/storecontroller.php';
              <h2>Description</h2>
                     
                     <p class='viewtext'>" . $data['description'] . "</p>"; ?>
-
-
-
                 </div>
 
-                <h3 class="white">Quantity</h3>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>69</option>
-                    <option>420</option>
-                </select>
+                
+                <form>
+                    <h3 class="white">Quantity</h3>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>69</option>
+                        <option>420</option>
+                    </select>
 
-                <h3 class="white">Size</h3>
-                <select>
-                    <option>Small</option>
-                    <option selected>Regular</option>
-                    <option>Large</option>
-                    <option>Extra Large</option>
-                    <option>Fetus</option>
-                    <option>Supersize</option>
-                    <option>No! How rude of you to ask!</option>
-                    <option>With a side of chips</option>
-                    <option>I hate my life</option>
-                </select>
-
-
-                <button class="addtocart">ADD TO CART</button>
+                    <h3 class="white">Size</h3>
+                    <select>
+                        <option>Small</option>
+                        <option selected>Regular</option>
+                        <option>Large</option>
+                        <option>Extra Large</option>
+                        <option>Fetus</option>
+                        <option>Supersize</option>
+                        <option>No! How rude of you to ask!</option>
+                        <option>With a side of chips</option>
+                        <option>I hate my life</option>
+                    </select>
+                    <button class="addtocart" type="submit">ADD TO CART</button>
+                </form>
 
                 <h3 class="white">Care Instructions</h3>
 

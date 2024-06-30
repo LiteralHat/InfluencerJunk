@@ -1,4 +1,5 @@
 <?php
+include_once "../config.php";
 require '../models/storemodel.php';
 
 class StoreController
