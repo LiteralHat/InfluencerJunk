@@ -1,5 +1,5 @@
 <?php include_once '../config.php';
-include_once '../controllers/storecontroller.php';
+include_once '../controllers/cartcontroller.php';
 ?>
 
 <!doctype html>
@@ -22,7 +22,7 @@ include_once '../controllers/storecontroller.php';
 
         <div class="cartmain">
             <h1 class="large">Your Cart</h1>
-            
+            <hr>
 
         </div>
 

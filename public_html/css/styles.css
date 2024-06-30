@@ -404,18 +404,20 @@ h3 {
 
 .cartbody {
     background-color: rgb(111, 0, 185);
-    padding: 1rem 20rem;
+    padding: 0 20rem;
     min-height: 100vh;
-display: flex;
-flex-direction: row;
-justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .cartmain {
     width: 55rem;
+    margin: 1rem;
 }
 
 .cartpanel {
+    margin: 1rem;
     width: 25rem;
     padding: 1rem;
     border: 0.2rem solid black;
