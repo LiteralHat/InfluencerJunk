@@ -9,10 +9,10 @@ class ViewController
     {
         $this->model = new ViewModel();
     }
-    public function index()
+    public function index($category, $name)
     {
-        $columns = 'name, price, category';
-        $data = $this->model->queryAllItems($columns);
+        $data = $this->model->queryViewItem($category, $name);
+        $data = $data[0];
         require_once '../views/view.php';
     }
 }

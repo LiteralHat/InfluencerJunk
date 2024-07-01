@@ -18,8 +18,8 @@
         <div class="viewitem">
             <div class="viewimage">
 
-
                 <?php
+                
                 $productName = str_replace('-', ' ', $data['name']);
                 $productPrice = $data['price'];
                 $productName = ucwords($productName);
