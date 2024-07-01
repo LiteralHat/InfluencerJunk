@@ -43,7 +43,7 @@
                 </div>
 
 
-                <form action="index.php?action=addProduct" method="POST">
+                <form action="index.php?action=addProduct" method="post">
                     <!-- <h3 class="white">Quantity</h3> -->
                     <input type="hidden" name="productpix" value="<?php echo htmlspecialchars($data["name"]); ?>">
                     <input type="hidden" name="price" value="<?php echo htmlspecialchars($data["price"]); ?>">

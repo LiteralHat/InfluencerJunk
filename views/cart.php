@@ -31,8 +31,8 @@
                     $productName = str_replace('-', ' ', $product['name']);
                     $productPrice = $product['price'];
                     $productName = ucwords($productName);
-    
-    
+
+
                     echo '<div class="cartitembox">
                     <div class="stupidwrap">
                     <img class="cartitemimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png">
@@ -49,7 +49,7 @@
                 echo '<br><p class="italics">Your cart is currently empty. Go be a filthy consumer, will you?</p><br>';
             }
 
-            
+
 
 
             ?>
@@ -68,10 +68,17 @@
             </h2>
             <hr>
             <br>
+
+
             <p>Apply coupon code?????</p>
             <br>
-            <input>
-            <submit></submit>
+            <form action="index.php?action=applyCoupon" method="post">
+                <input class="blacktext" type="text" id='coupon' name='coupon' required minlength="4" maxlength="8"
+                    size="10" /> <br>
+                <br><p class="italics"><?php echo $_SESSION['couponmessage']; ?></p><br>
+                <button type='submit' class="genericbutton">Apply Code</button>
+            </form>
+
 
 
         </div>

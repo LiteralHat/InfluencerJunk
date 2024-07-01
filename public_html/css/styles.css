@@ -529,3 +529,7 @@ h3 {
     border: 0.2rem solid black;
     cursor: pointer;
 }
+
+.blacktext {
+    color: black;
+}

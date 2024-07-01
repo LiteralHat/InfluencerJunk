@@ -16,7 +16,7 @@
 
     <div class="contentbody white centertext">
 
-        <h1 class="large">Successfully added item to cart!</h1>
+        <h1 class="large"><?php echo $message ?></h1>
 
         
         <p><a href='cart'>Click here to view your cart.</a></p>

@@ -23,18 +23,22 @@ switch ($action) {
         $controller = new CartController();
         $controller->add();
         break;
-        case 'clearCart':
-            include '../controllers/CartController.php';
-            $controller = new CartController();
-            $controller->clearCart();
-            break;
+    case 'clearCart':
+        include '../controllers/CartController.php';
+        $controller = new CartController();
+        $controller->clearCart();
+        break;
+    case 'applyCoupon':
+        include '../controllers/CartController.php';
+        $controller = new CartController();
+        $controller->applyCoupon();
+        break;
+
     // Other cases for different actions
     default:
+        $router = new Router();
+        $router->route($url);
 
-
-    $router = new Router();
-    $router->route($url);
-    
         break;
 }
 

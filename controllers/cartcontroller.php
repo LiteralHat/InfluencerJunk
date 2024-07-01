@@ -34,8 +34,9 @@ class CartController
             $total += $item['price']; // Accumulate each 'price' value
         }
 
+        $_SESSION['mastertotal'] = $total;
         $_SESSION['total'] = $total;
-        header("Location: /../cartsuccess");
+        header("Location: /../confirmation?action=addedProduct");
 
         exit();
     }
@@ -44,7 +45,24 @@ class CartController
     {
         $_SESSION['cartitems'] = [];
         $_SESSION['total'] = 0;
-        header("Location: /../cartsuccess");
+        header("Location: /../confirmation?action=clearedcart");
+        exit();
+    }
+
+    public function applyCoupon()
+    {
+        $coupon = $_POST['coupon'];
+        $coupon = strtolower($coupon);
+        switch ($coupon) {
+            case 'suckup':
+                $_SESSION['total'] = $_SESSION['mastertotal'] * 0.99;
+                break;
+            default:
+                $_SESSION['total'] = $_SESSION['mastertotal'];
+                break;
+        }
+        $_SESSION['couponmessage'] = 'Code Applied: ' . strtoupper($coupon);
+        header("Location: /../cart");
         exit();
     }
 }
