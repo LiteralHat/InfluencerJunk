@@ -15,7 +15,22 @@ class CartController
     {
         require_once '../views/cart.php';
     }
-}
 
+    public function add()
+    {
+
+        
+        $funnyarray = [
+            'name' => $_POST['productpix'],
+            'quantity' => $_POST['quantity'],
+            'size' => $_POST['size']
+        ];
+
+        $_SESSION['cartitems'][] = $funnyarray;
+
+        header("Location: /../cartsuccess");
+        exit();
+    }
+}
 
 $controller = new CartController();

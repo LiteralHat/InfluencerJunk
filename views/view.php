@@ -43,34 +43,35 @@
                 </div>
 
 
-                <form action="../controllers/cartcontroller.php" method="post">
+                <form action="index.php?action=addProduct" method="POST">
                     <h3 class="white">Quantity</h3>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>69</option>
-                        <option>420</option>
+                    <input type="hidden" name="productpix" value="<?php echo htmlspecialchars($data["name"]); ?>">
+                    <select name="quantity">
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option1 value='10'>10</option>
+                            <option6 value='69'>69</option>
+                                <option42 value='420'>420</option>
                     </select>
 
                     <h3 class="white">Size</h3>
-                    <select>
-                        <option>Small</option>
-                        <option selected>Regular</option>
-                        <option>Large</option>
-                        <option>Extra Large</option>
-                        <option>Fetus</option>
-                        <option>Supersize</option>
-                        <option>No! How rude of you to ask!</option>
-                        <option>With a side of chips</option>
-                        <option>I hate my life</option>
+                    <select name="size">
+                        <option value="small">Small</option>
+                        <option value="regular" selected>Regular</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">Extra Large</option>
+                        <option value="fetus">Fetus</option>
+                        <option value="supersize">Supersize</option>
+                        <option value="no">No! How rude of you to ask!</option>
+                        <option value="withchips">With a side of chips</option>
+                        <option value="existentialcrisis">I hate my life</option>
                     </select>
                     <button class="addtocart" type="submit">ADD TO CART</button>
                 </form>
