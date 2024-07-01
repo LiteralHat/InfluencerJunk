@@ -19,7 +19,7 @@
             <div class="viewimage">
 
                 <?php
-                
+
                 $productName = str_replace('-', ' ', $data['name']);
                 $productPrice = $data['price'];
                 $productName = ucwords($productName);
@@ -42,8 +42,8 @@
                     <p class='viewtext'>" . $data['description'] . "</p>"; ?>
                 </div>
 
-                
-                <form>
+
+                <form action="../controllers/cartcontroller.php" method="post">
                     <h3 class="white">Quantity</h3>
                     <select>
                         <option>1</option>

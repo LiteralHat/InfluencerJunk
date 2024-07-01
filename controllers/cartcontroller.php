@@ -11,16 +11,9 @@ class CartController
         $this->model = new CartModel();
     }
 
-    public function addItem()
+    public function index()
     {
-        $item = $_POST['item'];
-
-        if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = [];
-        }
-
-        $_SESSION['cart'][] = $item;
-        echo "Item added to cart: " . htmlspecialchars($item);
+        require_once '../views/cart.php';
     }
 }
 
