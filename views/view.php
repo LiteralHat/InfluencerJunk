@@ -1,7 +1,3 @@
-<?php include_once '../config.php';
-include_once '../controllers/storecontroller.php';
-?>
-
 <!doctype html>
 <html lang="en">
 
