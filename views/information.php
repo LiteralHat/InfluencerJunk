@@ -16,8 +16,7 @@
         <div class="whitebox">
             <h1 class="large">INFORMATION</h1>
             <br>
-            <p>So this is actually a parody site, if it's not already painfully obvious. I built this as a learning project, and
-                all the products are as fake as an influencer's talent.</p>
+            <p>So this is actually a parody site, if it's not already painfully obvious. This is my 'playground' site for testing new concepts and ideas, all the products displayed are as fake as an influencer's talent.</p>
                 <br>
             <p>Feel free to add items to your cart, go through the checkout process, and even enter your real info if
                 you're feeling reckless. But don't sue me because you didn't receive your sweatshop product that you

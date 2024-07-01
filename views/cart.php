@@ -17,24 +17,65 @@
     <div class="cartbody white">
 
         <div class="cartmain">
-            <h1 class="large">Your Cart</h1>
+            <span class='flexboxed'>
+                <h1 class="large">Your Cart</h1>
+                <form action="index.php?action=clearCart" method="post">
+                    <button class="genericbutton">Clear Cart</button>
+                </form>
+            </span>
             <hr>
 
             <?php
-
-            foreach ($_SESSION['cartitems'] as $product) {
-                echo "<div class='cartitembox'>" . $product['name'] . "</div>";
-
+            if (!empty($_SESSION['cartitems'])) {
+                foreach ($_SESSION['cartitems'] as $product) {
+                    $productName = str_replace('-', ' ', $product['name']);
+                    $productPrice = $product['price'];
+                    $productName = ucwords($productName);
+    
+    
+                    echo '<div class="cartitembox">
+                    <div class="stupidwrap">
+                    <img class="cartitemimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png">
+                    
+                    <div class="cartitemdesc"><h2>' . $productName . '</h2><p>Size: ' . $product["size"] . '</p>
+                    <p>Item Id: ' . $product["id"] . '</p></div></div>
+                    
+                    <div>
+                    <h3>' . $productPrice . '</h3>
+                    </div>
+                    </div>';
+                }
+            } else {
+                echo '<br><p class="italics">Your cart is currently empty. Go be a filthy consumer, will you?</p><br>';
             }
+
+            
 
 
             ?>
+            <hr>
+
+            <h2 class="flexboxed">YOUR TOTAL AMOUNT OF MONEY WASTED:
+                <span><?php echo $_SESSION['total']; ?></span>
+            </h2>
+
+
         </div>
 
         <div class="cartpanel">
+            <h2 class="totalmoneyswasted">YOUR TOTAL:
+                <span><?php echo $_SESSION['total']; ?></span>
+            </h2>
+            <hr>
+            <br>
+            <p>Apply coupon code?????</p>
+            <br>
+            <input>
+            <submit></submit>
 
-            <p>Apply code thing</p>
+
         </div>
+    </div>
 
     </div>
 

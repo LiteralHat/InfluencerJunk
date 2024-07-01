@@ -18,16 +18,32 @@ class CartController
 
     public function add()
     {
-
-        
         $funnyarray = [
+            'id' => bin2hex(random_bytes(4)),
             'name' => $_POST['productpix'],
-            'quantity' => $_POST['quantity'],
-            'size' => $_POST['size']
+            'size' => $_POST['size'],
+            'price' => $_POST['price']
         ];
+
 
         $_SESSION['cartitems'][] = $funnyarray;
 
+        $total = 0.0; // Initialize total variable
+
+        foreach ($_SESSION['cartitems'] as $item) {
+            $total += $item['price']; // Accumulate each 'price' value
+        }
+
+        $_SESSION['total'] = $total;
+        header("Location: /../cartsuccess");
+
+        exit();
+    }
+
+    public function clearCart()
+    {
+        $_SESSION['cartitems'] = [];
+        $_SESSION['total'] = 0;
         header("Location: /../cartsuccess");
         exit();
     }

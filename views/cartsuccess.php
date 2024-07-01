@@ -14,16 +14,13 @@
 
     <?php include_once ELEMENT_HEADER ?>
 
-    <div class="contentbody white">
+    <div class="contentbody white centertext">
 
         <h1 class="large">Successfully added item to cart!</h1>
+
+        
         <p><a href='cart'>Click here to view your cart.</a></p>
         <p><a href='..'>Click here to go back home.</a></p>
-
-        <?php 
-        var_dump($_SESSION['cartitems']);
-
-        ?>
 
     </div>
 

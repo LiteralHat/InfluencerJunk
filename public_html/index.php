@@ -23,6 +23,11 @@ switch ($action) {
         $controller = new CartController();
         $controller->add();
         break;
+        case 'clearCart':
+            include '../controllers/CartController.php';
+            $controller = new CartController();
+            $controller->clearCart();
+            break;
     // Other cases for different actions
     default:
 

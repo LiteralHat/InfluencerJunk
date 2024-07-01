@@ -480,3 +480,52 @@ h3 {
 .footernavbar>ul :hover {
     color: #ffef09;
 }
+
+
+
+.cartitembox {
+    height: 20vh;
+    background-color: rgb(59, 35, 90);
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    border: 0.2rem solid black;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.stupidwrap {
+    display: flex;
+}
+
+.cartitemdesc {
+    padding-left: 1rem;
+}
+
+.flexboxed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.genericbutton {
+    height: 3rem;
+    font-family: Cooper Black, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 12rem;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #ff0080;
+    border: 0.2rem solid black;
+}
+
+.genericbutton:hover {
+    height: 3rem;
+    font-family: Cooper Black, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 12rem;
+    color: #ff0080;
+    font-size: 1.3rem;
+    background-color: #ffffff;
+    border: 0.2rem solid black;
+    cursor: pointer;
+}
