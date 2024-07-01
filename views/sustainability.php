@@ -57,6 +57,8 @@
         <br>
         </div>
 
+        <?php include_once ELEMENT_FOOTER ?>
+
 </body>
 
 

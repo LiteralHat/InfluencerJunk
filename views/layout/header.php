@@ -4,7 +4,7 @@
 </div>
     <nav class="navbar">
         <ul>
-            <li><a href='<?php echo BASE_URL . 'index'?>'>Home</a></li>
+            <li><a href='<?php echo BASE_URL . ''?>'>Home</a></li>
 
             <li><a href='<?php echo BASE_URL . 'sustainability'?>'>Sustainability</a></li>
           

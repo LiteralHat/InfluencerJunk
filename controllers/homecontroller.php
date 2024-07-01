@@ -14,7 +14,7 @@ class HomeController
     {
         $columns = 'name, price, category';
         $data = $this->model->queryAllItems($columns);
-        require_once '../views/home/index.php';
+        require_once '../views/index.php';
 
     }
 }

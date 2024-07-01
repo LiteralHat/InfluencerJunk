@@ -33,7 +33,7 @@ include_once '../controllers/cartcontroller.php';
 
     </div>
 
-
+    <?php include_once ELEMENT_FOOTER ?>
 
 </body>
 

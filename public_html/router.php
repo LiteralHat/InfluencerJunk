@@ -7,8 +7,6 @@ class Router {
     public function route($url) {
         $urlSegments = explode('/', $url);
 
-
-        print_r( $urlSegments);
         $controllerName = !empty($urlSegments[0]) ? ucfirst($urlSegments[0]) . 'Controller' : $this->defaultController;
         $controllerFile = '../controllers/' . $controllerName . '.php';
 
@@ -16,10 +14,10 @@ class Router {
             require_once $controllerFile;
 
             $controller = new $controllerName;
-            $method = !empty($urlSegments[1]) ? $urlSegments[1] : $this->defaultMethod;
+            $method = $this->defaultMethod;
 
             unset($urlSegments[0]);
-            unset($urlSegments[1]);
+            
             $params = array_values($urlSegments);
 
             if (method_exists($controller, $method)) {

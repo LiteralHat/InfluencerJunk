@@ -32,13 +32,13 @@
             </div>
         </div>
 
-            
 
     </div>
 
     </div>
 
 
+    <?php include_once ELEMENT_FOOTER ?>
 
 
 </body>
