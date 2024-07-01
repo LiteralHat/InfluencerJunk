@@ -1,52 +1,47 @@
-<?php include_once "../config.php";
-include_once '../controllers/storecontroller.php';
+<?php
 
-?>
+include_once '../config/constants.php';
+//removes trailing slashes
 
-<!doctype html>
-<html lang='en'>
+$url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title>INFLUENCERJUNK.COM</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+$defaultController = 'HomeController';
+$defaultMethod = 'index';
 
-<body>
-
-    <?php include_once ELEMENT_HEADER ?>
-
-    <div class="productbody">
-        <div class="productgridwrapper">
-            <div class="productgrid">
-                <?php
-
-                foreach ($data as $product) {
-                    $productName = str_replace('-', ' ', $product['name']);
-                    $productPrice = $product['price'];
-                    $productName = ucwords($productName);
-                    echo '<div class="productbox"><a href="view/'. $product["category"] .'/'. $product["name"].'"><img class="productgridimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png"><p class="bold">' . $productName . '</p>
-                    <p class="">' . $productPrice . '</p></a></div>'
-                    ;
-
-                }
-                ?>
-            </div>
-        </div>
-
-            
-
-    </div>
-
-    </div>
+$urlSegments = explode('/', $url);
 
 
 
 
-</body>
+//determines controller name
+$controllerName = !empty($urlSegments[0]) ? ucfirst($urlSegments[0]) . 'controller' : $defaultController;
+$controllerFile = '../controllers/' . $controllerName . '.php';
 
 
-</html>
+if (file_exists($controllerFile)) {
+    require_once $controllerFile;
+
+    // Create controller object
+    $controller = new $controllerName;
+
+    // Determine the method (action)
+    $method = isset($urlSegments[1]) ? $urlSegments[1] : $defaultMethod;
+
+
+    // Check if the method exists in the controller
+    if (method_exists($controller, $method)) {
+        // Call the method and pass any additional URL segments as parameters
+        unset($urlSegments[0]); // Remove the controller name
+        unset($urlSegments[1]); // Remove the method name
+        $params = array_values($urlSegments); // Remaining segments as parameters
+        $controller->$method(...$params);
+
+    } else {
+
+        // Handle method not found (e.g., show 404 page)
+        echo "Method not found";
+    }
+} else {
+    // Handle controller not found (e.g., show 404 page)
+    echo "Controller not found";
+}
