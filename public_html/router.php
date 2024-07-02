@@ -36,6 +36,10 @@ class Router
                 } else {
                     echo "Method not found";
                 }
+            } elseif ($urlSegments[0]=='apparel' ||$urlSegments[0]=='accessories') {
+                require_once '../controllers/homecontroller.php';
+                $controller = new HomeController(); 
+                $controller->subpage($urlSegments[0]);
             } else {
                 $this->serveStaticPage($url);
             }

@@ -32,17 +32,22 @@
                     $productPrice = $product['price'];
                     $productName = ucwords($productName);
 
-
                     echo '<div class="cartitembox">
                     <div class="stupidwrap">
                     <img class="cartitemimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png">
                     
                     <div class="cartitemdesc"><h2>' . $productName . '</h2><p>Size: ' . $product["size"] . '</p>
-                    <p>Item Id: ' . $product["id"] . '</p></div></div>
+                    <p>Item Id: ' . $product["id"] . '</p><br>
+                    <form action="index.php?action=' . $product["id"] . '" method="post">
+                    <button class="removeitembutton">Remove Item</button>
+                    </form>
+                    
+                    </div></div>
                     
                     <div>
                     <h3>' . $productPrice . '</h3>
                     </div>
+                    
                     </div>';
                 }
             } else {
@@ -75,7 +80,8 @@
             <form action="index.php?action=applyCoupon" method="post">
                 <input class="blacktext" type="text" id='coupon' name='coupon' required minlength="4" maxlength="8"
                     size="10" /> <br>
-                <br><p class="italics"><?php echo $_SESSION['couponmessage']; ?></p><br>
+                <br>
+                <p class="italics"><?php echo $_SESSION['couponmessage']; ?></p><br>
                 <button type='submit' class="genericbutton">Apply Code</button>
             </form>
 

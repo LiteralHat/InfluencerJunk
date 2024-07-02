@@ -2,6 +2,10 @@
 include_once "../config/constants.php";
 require '../models/cartmodel.php';
 
+
+
+//the code on this page is super spaghety, im super sorry in advance
+
 class CartController
 {
     private $model;
@@ -65,6 +69,24 @@ class CartController
         $_SESSION['couponmessage'] = 'Code Applied: ' . strtoupper($coupon);
         header("Location: /../cart");
         exit();
+    }
+
+    
+    public function removeItem($id)
+    {
+        foreach ($_SESSION['cartitems'] as $key => $product) {
+            if ($product['id'] == $id) {
+                $_SESSION['total'] = $_SESSION['total'] - $_SESSION['cartitems'][$key]['price'];
+                unset($_SESSION['cartitems'][$key]);
+                break;
+            }
+        }
+        if ($_SESSION['total'] < 0) {
+            $_SESSION['total'] = 0;
+        }
+
+        header("Location: /../cart");
+
     }
 }
 

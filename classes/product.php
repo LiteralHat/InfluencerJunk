@@ -1,5 +1,6 @@
 <?php
 
+//if im being perfectly honest here im not sure if this is how abstract classes should be used. I just needed an excuse to toy with it for purpose practices. 
 abstract class Product
 {
     protected $name;
