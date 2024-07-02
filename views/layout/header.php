@@ -4,7 +4,8 @@
 <nav class="navbar">
     <ul>
         <li><a href='<?php echo BASE_URL . '' ?>'>Home</a></li>
-
+        <li><a href='<?php echo BASE_URL . 'apparel' ?>'>Apparel</a></li>
+        <li><a href='<?php echo BASE_URL . 'accessories' ?>'>Accessories</a></li>
         <li><a href='<?php echo BASE_URL . 'sustainability' ?>'>Sustainability</a></li>
 
 

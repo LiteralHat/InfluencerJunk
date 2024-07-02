@@ -18,7 +18,11 @@
         <div class="viewitem">
             <div class="viewimage">
 
+
+
                 <?php
+
+               
 
                 $productName = str_replace('-', ' ', $data['name']);
                 $productPrice = $data['price'];
@@ -51,18 +55,7 @@
                         <option value='1'>1</option>
                     </select> -->
 
-                    <h3 class="white">Size</h3>
-                    <select name="size">
-                        <option value="Small">Small</option>
-                        <option value="NORMIE" selected>Regular</option>
-                        <option value="Large">Large</option>
-                        <option value="Extra Large">Extra Large</option>
-                        <option value="Fetus">Fetus</option>
-                        <option value="Supersize">Supersize</option>
-                        <option value="Bitch Size">No! How rude of you to ask!</option>
-                        <option value="With Chips">With a side of chips</option>
-                        <option value="It doesn't matter anyways :(">I hate my life</option>
-                    </select>
+                    <?php echo $extrahtml;?>
                     <button class="addtocart" type="submit">ADD TO CART</button>
                 </form>
 

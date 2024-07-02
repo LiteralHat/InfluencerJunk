@@ -44,6 +44,7 @@ class CartController
     public function clearCart()
     {
         $_SESSION['cartitems'] = [];
+        $_SESSION['couponmessage'] = '';
         $_SESSION['total'] = 0;
         header("Location: /../confirmation?action=clearedcart");
         exit();
