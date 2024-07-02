@@ -19,7 +19,11 @@
             <div class="viewimage">
 
 
+
                 <?php
+
+               
+
                 $productName = str_replace('-', ' ', $data['name']);
                 $productPrice = $data['price'];
                 $productName = ucwords($productName);
@@ -42,36 +46,16 @@
                     <p class='viewtext'>" . $data['description'] . "</p>"; ?>
                 </div>
 
-                
-                <form>
-                    <h3 class="white">Quantity</h3>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>69</option>
-                        <option>420</option>
-                    </select>
 
-                    <h3 class="white">Size</h3>
-                    <select>
-                        <option>Small</option>
-                        <option selected>Regular</option>
-                        <option>Large</option>
-                        <option>Extra Large</option>
-                        <option>Fetus</option>
-                        <option>Supersize</option>
-                        <option>No! How rude of you to ask!</option>
-                        <option>With a side of chips</option>
-                        <option>I hate my life</option>
-                    </select>
+                <form action="index.php?action=addProduct" method="post">
+                    <!-- <h3 class="white">Quantity</h3> -->
+                    <input type="hidden" name="productpix" value="<?php echo htmlspecialchars($data["name"]); ?>">
+                    <input type="hidden" name="price" value="<?php echo htmlspecialchars($data["price"]); ?>">
+                    <!-- <select name="quantity">
+                        <option value='1'>1</option>
+                    </select> -->
+
+                    <?php echo $extrahtml;?>
                     <button class="addtocart" type="submit">ADD TO CART</button>
                 </form>
 
@@ -95,6 +79,9 @@
 
     </div>
 
+
+
+    <?php include_once ELEMENT_FOOTER ?>
 
 
 

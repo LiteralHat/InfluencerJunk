@@ -1,47 +1,47 @@
 <?php
-
 include_once '../config/constants.php';
-//removes trailing slashes
+require_once 'router.php';
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
-$defaultController = 'HomeController';
-$defaultMethod = 'index';
-
-$urlSegments = explode('/', $url);
 
 
 
+// Assuming you're using a basic routing mechanism
+$action = isset($_GET['action']) ? $_GET['action'] : 'default';
 
-//determines controller name
-$controllerName = !empty($urlSegments[0]) ? ucfirst($urlSegments[0]) . 'controller' : $defaultController;
-$controllerFile = '../controllers/' . $controllerName . '.php';
+// Include necessary files and initialize objects as needed
 
+// Route the request to the appropriate controller method based on action
+switch ($action) {
+    case 'addProduct':
+        include '../controllers/CartController.php';
+        $controller = new CartController();
+        $controller->add();
+        break;
+    case 'clearCart':
+        include '../controllers/CartController.php';
+        $controller = new CartController();
+        $controller->clearCart();
+        break;
+    case 'applyCoupon':
+        include '../controllers/CartController.php';
+        $controller = new CartController();
+        $controller->applyCoupon();
+        break;
 
-if (file_exists($controllerFile)) {
-    require_once $controllerFile;
+    // Other cases for different actions
+    default:
+        $router = new Router();
+        $router->route($url);
 
-    // Create controller object
-    $controller = new $controllerName;
-
-    // Determine the method (action)
-    $method = isset($urlSegments[1]) ? $urlSegments[1] : $defaultMethod;
-
-
-    // Check if the method exists in the controller
-    if (method_exists($controller, $method)) {
-        // Call the method and pass any additional URL segments as parameters
-        unset($urlSegments[0]); // Remove the controller name
-        unset($urlSegments[1]); // Remove the method name
-        $params = array_values($urlSegments); // Remaining segments as parameters
-        $controller->$method(...$params);
-
-    } else {
-
-        // Handle method not found (e.g., show 404 page)
-        echo "Method not found";
-    }
-} else {
-    // Handle controller not found (e.g., show 404 page)
-    echo "Controller not found";
+        break;
 }
+
+
+
+

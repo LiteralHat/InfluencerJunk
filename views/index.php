@@ -12,7 +12,10 @@
 
 <body>
 
-    <?php include_once ELEMENT_HEADER ?>
+    <?php include_once ELEMENT_HEADER;
+
+    
+    ?>
 
     <div class="productbody">
         <div class="productgridwrapper">
@@ -32,13 +35,13 @@
             </div>
         </div>
 
-            
 
     </div>
 
     </div>
 
 
+    <?php include_once ELEMENT_FOOTER ?>
 
 
 </body>
