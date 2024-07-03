@@ -12,12 +12,22 @@
 
 <body>
 
-    <?php include_once ELEMENT_HEADER ?>
+    <?php include_once ELEMENT_HEADER;
+    ?>
+
 
     <div class="productbody">
+    <br>
+    <div class="centertext white">
+    <h1 class="subpagetitle"><?php echo strtoupper($pageName); ?></h1>
+    <br>
+    <p class="subpagedescription"><?php echo $extraHtml; ?></p>
+    </div>
         <div class="productgridwrapper">
             <div class="productgrid">
                 <?php
+
+                
 
                 foreach ($data as $product) {
                     $productName = str_replace('-', ' ', $product['name']);
@@ -32,13 +42,13 @@
             </div>
         </div>
 
-            
 
     </div>
 
     </div>
 
 
+    <?php include_once ELEMENT_FOOTER ?>
 
 
 </body>

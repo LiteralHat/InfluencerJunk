@@ -1,7 +1,3 @@
-<?php include_once '../config.php';
-include_once '../controllers/cartcontroller.php';
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -21,19 +17,82 @@ include_once '../controllers/cartcontroller.php';
     <div class="cartbody white">
 
         <div class="cartmain">
-            <h1 class="large">Your Cart</h1>
+            <span class='flexboxed'>
+                <h1 class="large">Your Cart</h1>
+                <form action="index.php?action=clearCart" method="post">
+                    <button class="genericbutton">Clear Cart</button>
+                </form>
+            </span>
             <hr>
+
+            <?php
+            if (!empty($_SESSION['cartitems'])) {
+                foreach ($_SESSION['cartitems'] as $product) {
+                    $productName = str_replace('-', ' ', $product['name']);
+                    $productPrice = $product['price'];
+                    $productName = ucwords($productName);
+
+                    echo '<div class="cartitembox">
+                    <div class="stupidwrap">
+                    <img class="cartitemimage" src="' . BASE_URL . '/img/products/' . htmlspecialchars($product['name']) . '.png">
+                    
+                    <div class="cartitemdesc"><h2>' . $productName . '</h2><p>Size: ' . $product["size"] . '</p>
+                    <p>Item Id: ' . $product["id"] . '</p><br>
+                    <form action="index.php?action=' . $product["id"] . '" method="post">
+                    <button class="removeitembutton">Remove Item</button>
+                    </form>
+                    
+                    </div></div>
+                    
+                    <div>
+                    <h3>' . $productPrice . '</h3>
+                    </div>
+                    
+                    </div>';
+                }
+            } else {
+                echo '<br><p class="italics">Your cart is currently empty. Go be a filthy consumer, will you?</p><br>';
+            }
+
+
+
+
+            ?>
+            <hr>
+
+            <h2 class="flexboxed">YOUR TOTAL AMOUNT OF MONEY WASTED:
+                <span><?php echo $_SESSION['total']; ?></span>
+            </h2>
+
 
         </div>
 
         <div class="cartpanel">
+            <h2 class="totalmoneyswasted">YOUR TOTAL:
+                <span><?php echo $_SESSION['total']; ?></span>
+            </h2>
+            <hr>
+            <br>
 
-            <p>Apply code thing</p>
+
+            <p>Apply coupon code?????</p>
+            <br>
+            <form action="index.php?action=applyCoupon" method="post">
+                <input class="blacktext" type="text" id='coupon' name='coupon' required minlength="4" maxlength="8"
+                    size="10" /> <br>
+                <br>
+                <p class="italics"><?php echo $_SESSION['couponmessage']; ?></p><br>
+                <button type='submit' class="genericbutton">Apply Code</button>
+            </form>
+
+
+
         </div>
+    </div>
 
     </div>
 
-
+    <?php include_once ELEMENT_FOOTER ?>
 
 </body>
 
